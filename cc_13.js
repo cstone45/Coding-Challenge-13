@@ -17,3 +17,14 @@ employeeCardArray.forEach(card => {
     background-color: dark Blue;
     border-radius: 6px;
 })
+
+//Task 4: Implementing Removal of Employee Cards with Event Bubbling
+const employeeContainer= document.getElementById("employeeContainer");
+const employeeCard = document.querySelector("#employeeCard");
+employeeContainer.addEventListener('click', () => {
+    console.log('Employee Card Clicked');
+})
+employeeCard.addEventListener('click', () => {
+    console.log(removeChild(employeeContainer));
+    stopPropagation();
+});
